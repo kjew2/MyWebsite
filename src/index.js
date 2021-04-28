@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//ga
+import ReactGA from 'react-ga';
+ReactGA.initialize('G-49D30NWPKQ');
+ReactGA.pageview(window.location.pathname + window.location.search);
+//ga
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
