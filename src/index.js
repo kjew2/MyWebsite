@@ -3,15 +3,36 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {getCLS, getFID, getLCP} from 'web-vitals';
+import {Helmet} from 'react-helmet'
+const injectGA = () => {
+  if (typeof window == 'undefined') {
+    return;
+  }
 
-//ga
-import ReactGA from 'react-ga';
-ReactGA.initialize('G-49D30NWPKQ');
-ReactGA.pageview(window.location.pathname + window.location.search);
-//ga
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'G-49D30NWPKQ');
+};
+
+
 
 ReactDOM.render(
+  
+
   <React.StrictMode>
+    <Helmet>
+      <title>Kyle Jew</title>
+      <script 
+        async 
+        src="https://www.googletagmanager.com/gtag/js?id=G-49D30NWPKQ"/>
+      <script>{injectGA()}</script>
+    </Helmet>
+    
     <App />
   </React.StrictMode>,
   document.getElementById('root')
@@ -20,4 +41,4 @@ ReactDOM.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
