@@ -12,11 +12,6 @@ import ReactGA from 'react-ga';
 //ga
 
 function App() {
-  useEffect(() => {
-    ReactGA.initialize('UA-195675661-1');
-    ReactGA.pageview(window.location.pathname + window.location.search);
-    console.log(window.location.pathname + window.location.search)
-  }, [])
   return (
     <div className="App">
       <Router>

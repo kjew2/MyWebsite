@@ -8,6 +8,8 @@ export const homeObjOne = {
     buttonLabel: 'Contact',
     imgStart: '',
     src: 'images/zo.png',
-    alt: 'Credit Card'
+    alt: 'Credit Card',
+    linkedin: "//linkedin.com/in/kylejew/",
+    github: "//github.com/kjew2/"
 
 }
